@@ -1,14 +1,14 @@
 $text-dark: #2c2c2c;
 
-
 $background-light: #FFFFFF;
 $background-medium: #F9F9FA;
 $background-dark: #E4E5E6;
 $background-extra-dark: #6B7883;
 
-$font-family: 'Roboto', sans-serif;
+$font-family: 'Roboto',
+sans-serif;
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -19,8 +19,32 @@ body {
     color: $text-dark;
 }
 
+#side-panel--modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #0000006c;
+
+    .close {
+        background-color: tomato;
+        color: $background-light;
+        font-size: 2rem;
+        padding: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        border-radius: 0.3rem;
+    }
+}
 
 .side-panel {
     display: flex;
     flex-direction: row;
+    width: 80vw;
+    float: right;
 }
