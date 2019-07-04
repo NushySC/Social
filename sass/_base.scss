@@ -1,0 +1,26 @@
+$text-dark: #2c2c2c;
+
+
+$background-light: #FFFFFF;
+$background-medium: #F9F9FA;
+$background-dark: #E4E5E6;
+$background-extra-dark: #6B7883;
+
+$font-family: 'Roboto', sans-serif;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family;
+    color: $text-dark;
+}
+
+
+.side-panel {
+    display: flex;
+    flex-direction: row;
+}
