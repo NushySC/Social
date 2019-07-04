@@ -17,10 +17,11 @@ sans-serif;
 body {
     font-family: $font-family;
     color: $text-dark;
+    font-size: calc(1em + 1vw);
 }
 
 #show-panel {
-    background-image: linear-gradient( tomato, orange);
+    background-image: linear-gradient(45deg, tomato, orange);
     color: $background-light;
     border-style: none;
     padding: 1rem;
@@ -30,7 +31,7 @@ body {
     box-shadow: .3rem .3rem .5rem #6e6e6e;
 
     &:hover {
-        background-image: linear-gradient(orange, tomato);
+        background-image: linear-gradient(90deg, orange, tomato);
     }
 
     &:focus {

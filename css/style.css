@@ -5,10 +5,11 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #2c2c2c; }
+  color: #2c2c2c;
+  font-size: calc(1em + 1vw); }
 
 #show-panel {
-  background-image: linear-gradient(tomato, orange);
+  background-image: linear-gradient(45deg, tomato, orange);
   color: #FFFFFF;
   border-style: none;
   padding: 1rem;
@@ -17,7 +18,7 @@ body {
   margin: 3rem;
   box-shadow: .3rem .3rem .5rem #6e6e6e; }
   #show-panel:hover {
-    background-image: linear-gradient(orange, tomato); }
+    background-image: linear-gradient(90deg, orange, tomato); }
   #show-panel:focus {
     outline: .1rem solid #00000000; }
   #show-panel:active {
@@ -60,23 +61,24 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
-    padding: 0 2rem;
-    background-color: #FFFFFF; }
+    height: auto;
+    padding: 1rem 2rem;
+    background-color: #FFFFFF;
+    flex-wrap: wrap; }
     .content__header--left {
       display: flex;
       flex-direction: row;
       align-self: right;
-      width: 70%;
-      align-items: center; }
+      align-items: center;
+      flex-wrap: wrap;
+      width: 80%; }
       .content__header--left img {
-        width: 5rem;
-        height: 5rem;
+        width: 10%;
+        height: auto;
         margin: 0 1rem; }
       .content__header--left .bio {
         display: grid;
         grid-gap: 0.5rem;
-        width: 50%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "name name business business" "gender gender age age"; }
@@ -88,7 +90,6 @@ body {
         .content__header--left .bio .business {
           background-color: #5c6064;
           color: #FFFFFF;
-          height: 1.3rem;
           border-radius: 0.7rem;
           font-size: 0.6rem;
           grid-area: business;
@@ -106,7 +107,8 @@ body {
           grid-area: age; }
     .content__header--right {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      width: 20%; }
       .content__header--right img {
         width: 2rem;
         height: 2rem;
@@ -122,7 +124,13 @@ body {
     align-items: center;
     background-color: #F9F9FA; }
     .content__main p {
-      margin: 2rem 0; }
+      font-size: 0.5em;
+      width: 80%;
+      text-align: center; }
+    .content__main img {
+      width: 30%;
+      height: auto;
+      margin-bottom: 2rem; }
 
 .nav {
   display: flex;
@@ -130,7 +138,8 @@ body {
   background-color: #F9F9FA;
   width: 20%;
   height: 100vh;
-  border-right: 0.1rem solid #E4E5E6; }
+  border-right: 0.1rem solid #E4E5E6;
+  font-size: 0.5em; }
   .nav__links {
     padding: 0.7rem; }
     .nav__links:hover {
