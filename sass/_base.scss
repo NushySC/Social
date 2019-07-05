@@ -1,4 +1,4 @@
-$text-dark: #2c2c2c;
+$text-dark: #444444;
 
 $background-light: #FFFFFF;
 $background-medium: #F9F9FA;
@@ -16,8 +16,9 @@ sans-serif;
 
 body {
     font-family: $font-family;
+    font-weight: 400;
     color: $text-dark;
-    font-size: calc(1em + 1vw);
+    font-size: calc(1.5em + 1vw);
 }
 
 #show-panel {
@@ -28,7 +29,7 @@ body {
     font-weight: 700;
     border-radius: 0.3rem;
     margin: 3rem;
-    box-shadow: .3rem .3rem .5rem #6e6e6e;
+    box-shadow: .3rem .3rem .5rem $background-extra-dark;
 
     &:hover {
         background-image: linear-gradient(90deg, orange, tomato);
@@ -55,15 +56,24 @@ body {
     background-color: #0000006c;
 
     .close {
-        background-image: linear-gradient( #303030, $background-extra-dark);
+        background-image: linear-gradient(#303030, $background-extra-dark);
         color: $background-light;
-        font-size: 2rem;
+        //font-size: 2rem;
         width: 2.5rem;
         height: 2.5rem;
         text-align: center;
         border-radius: 0.3rem 0 0 0.3rem;
         position: relative;
         top: 1.5rem;
+
+        img {
+            width: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
     }
 }
 
