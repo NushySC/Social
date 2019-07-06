@@ -39,8 +39,8 @@ body {
   #side-panel--modal .close {
     background-image: linear-gradient(#303030, #5c6064);
     color: #FFFFFF;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     text-align: center;
     border-radius: 0.3rem 0 0 0.3rem;
     position: relative;
@@ -49,7 +49,7 @@ body {
       #side-panel--modal .close {
         border-radius: 0; } }
     #side-panel--modal .close img {
-      width: 1.5rem;
+      width: 1rem;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -95,7 +95,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     height: auto;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     background-color: #FFFFFF;
     border-bottom: 0.1rem solid #E4E5E6; }
     @media only screen and (max-width: 700px) {
