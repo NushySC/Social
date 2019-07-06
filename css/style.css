@@ -6,20 +6,28 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #444444;
-  font-size: calc(1.5em + 1vw); }
+  color: #222222;
+  font-size: calc(1.5em + 1vw);
+  background-color: #96285F; }
+
+.intructions {
+  color: #FFFFFF;
+  font-weight: 500;
+  margin: 2rem 0 0 2rem;
+  font-size: .7em; }
 
 #show-panel {
-  background-image: linear-gradient(45deg, tomato, orange);
+  background-image: linear-gradient(90deg, #25274F, #636AE2);
   color: #FFFFFF;
   border-style: none;
-  padding: 1rem;
+  padding: .7rem;
   font-weight: 700;
   border-radius: 0.3rem;
-  margin: 3rem;
-  box-shadow: 0.3rem 0.3rem 0.5rem #5c6064; }
+  margin: 1rem 4rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.507);
+  letter-spacing: .1rem; }
   #show-panel:hover {
-    background-image: linear-gradient(90deg, orange, tomato); }
+    background-image: linear-gradient(180deg, #636AE2, #25274F); }
   #show-panel:focus {
     outline: .1rem solid #00000000; }
   #show-panel:active {
@@ -44,6 +52,9 @@ body {
     border-radius: 0.3rem 0 0 0.3rem;
     position: relative;
     top: 1.5rem; }
+    @media only screen and (max-width: 400px) {
+      #side-panel--modal .close {
+        border-radius: 0; } }
     #side-panel--modal .close img {
       width: 1.5rem;
       position: absolute;
@@ -51,18 +62,40 @@ body {
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -50%); }
+      @media only screen and (max-width: 600px) {
+        #side-panel--modal .close img {
+          width: 1rem;
+          height: 1rem; } }
+    @media only screen and (max-width: 600px) {
+      #side-panel--modal .close {
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .side-panel {
   display: flex;
   flex-direction: row;
   width: 80vw;
   float: right; }
+  @media only screen and (max-width: 800px) {
+    .side-panel {
+      width: 90vw; } }
+  @media only screen and (max-width: 500px) {
+    .side-panel {
+      width: 100vw; } }
+  @media only screen and (max-width: 400px) {
+    .side-panel {
+      width: 100vw;
+      flex-direction: column; } }
 
 .content {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 75%;
   background-color: #FFFFFF; }
+  @media only screen and (max-width: 400px) {
+    .content {
+      width: auto;
+      height: auto; } }
   .content__header {
     display: flex;
     flex-direction: row;
@@ -71,48 +104,61 @@ body {
     height: auto;
     padding: 1.5rem 2rem;
     background-color: #FFFFFF;
-    flex-wrap: wrap;
     border-bottom: 0.1rem solid #E4E5E6; }
+    @media only screen and (max-width: 700px) {
+      .content__header {
+        flex-direction: column-reverse; } }
     .content__header--left .bio {
-      width: 40vw;
       display: grid;
-      grid-template-columns: min-content max-content min-content max-content max-content;
+      grid-template-columns: minmax(1rem, 2rem) minmax(1rem, 2rem) min-content max-content max-content;
       grid-template-rows: min-content 2rem;
-      grid-column-gap: 1rem;
+      grid-column-gap: 0.2em;
       align-items: start; }
+      @media only screen and (max-width: 400px) {
+        .content__header--left .bio {
+          grid-template-columns: repeat(auto-fit, 2rem);
+          grid-column-gap: 0.3rem; } }
     .content__header--left .item {
       padding: 0.3rem;
       font-size: 0.5rem;
       font-family: sans-serif;
-      color: #444444;
-      font-weight: 500; }
+      color: #222222; }
       .content__header--left .item--avatar {
         grid-row: 1/-1;
         grid-column: 1/3;
-        align-self: stretch; }
+        align-self: center;
+        justify-self: center; }
         .content__header--left .item--avatar img {
-          width: 4rem; }
+          width: 100%;
+          height: auto; }
+          @media only screen and (max-width: 700px) {
+            .content__header--left .item--avatar img {
+              width: 6em; } }
       .content__header--left .item--name {
-        font-size: 1.7rem;
-        grid-column: 3/5; }
+        font-size: 0.6em;
+        font-weight: 500;
+        grid-column: 3/5;
+        align-self: flex-end; }
       .content__header--left .item--business {
         background-color: #5c6064;
+        font-weight: 700;
         font-size: 0.2em;
         color: #FFFFFF;
         border-radius: .8rem;
         grid-column: 5/6;
-        align-self: center;
-        padding: 0.3rem 0.6rem; }
+        align-self: center; }
       .content__header--left .item--gender {
         font-size: 0.3em;
         justify-self: end;
         grid-column: 3/4;
         border-right: 0.1rem solid #E4E5E6;
-        padding-right: 1rem; }
+        padding-right: 1rem;
+        font-weight: 500; }
       .content__header--left .item--age {
         font-size: 0.3em;
         justify-self: start;
-        grid-column: 4/5; }
+        grid-column: 4/5;
+        font-weight: 500; }
     .content__header--right {
       display: flex;
       flex-direction: row; }
@@ -123,13 +169,19 @@ body {
         border-radius: 0.3rem;
         margin-left: 0.6rem;
         padding: 0.3rem; }
+        @media only screen and (max-width: 700px) {
+          .content__header--right img {
+            width: 1rem;
+            height: 1rem;
+            padding: 0.1rem; } }
   .content__main {
     height: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F9F9FA; }
+    background-color: #F9F9FA;
+    padding: 3rem 2rem; }
     .content__main p {
       font-size: 0.4em;
       width: 80%;
@@ -143,12 +195,22 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #F9F9FA;
-  width: 20%;
+  width: 25%;
   height: 100vh;
   border-right: 0.1rem solid #E4E5E6;
-  font-size: 0.4em; }
+  font-size: 0.35em;
+  font-weight: 400; }
+  @media only screen and (max-width: 400px) {
+    .nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: auto;
+      height: auto; } }
   .nav__links {
-    padding: 0.8rem; }
+    padding: 0.8rem 1.5em; }
+    @media only screen and (max-width: 400px) {
+      .nav__links {
+        padding: 0.3rem; } }
     .nav__links:hover {
       background-color: #E4E5E6;
       border-radius: 0.3rem;
