@@ -10,12 +10,6 @@ body {
   font-size: calc(1.5em + 1vw);
   background-color: #96285F; }
 
-.intructions {
-  color: #FFFFFF;
-  font-weight: 500;
-  margin: 2rem 0 0 2rem;
-  font-size: .7em; }
-
 #show-panel {
   background-image: linear-gradient(90deg, #25274F, #636AE2);
   color: #FFFFFF;
@@ -23,9 +17,8 @@ body {
   padding: .7rem;
   font-weight: 700;
   border-radius: 0.3rem;
-  margin: 1rem 4rem;
-  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.507);
-  letter-spacing: .1rem; }
+  margin: 3rem 4rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.507); }
   #show-panel:hover {
     background-image: linear-gradient(180deg, #636AE2, #25274F); }
   #show-panel:focus {
@@ -107,7 +100,8 @@ body {
     border-bottom: 0.1rem solid #E4E5E6; }
     @media only screen and (max-width: 700px) {
       .content__header {
-        flex-direction: column-reverse; } }
+        flex-direction: column-reverse;
+        padding: 1rem; } }
     .content__header--left .bio {
       display: grid;
       grid-template-columns: minmax(1rem, 2rem) minmax(1rem, 2rem) min-content max-content max-content;
@@ -205,7 +199,8 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       width: auto;
-      height: auto; } }
+      height: auto;
+      padding-top: 1rem; } }
   .nav__links {
     padding: 0.8rem 1.5em; }
     @media only screen and (max-width: 400px) {
